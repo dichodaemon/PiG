@@ -1,0 +1,7 @@
+To DO
+-----
+
+* Correct collisionSide function to take into account
+  left-side object collision box.
+* Provide Actor and View with both a tigh collision box and a wide one for
+  displaying.

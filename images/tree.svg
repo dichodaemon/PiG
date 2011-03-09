@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="184.95096"
+   height="265.75897"
+   id="svg5746"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="tree.svg"
+   inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/tree.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.77472527"
+     inkscape:cx="-153.55112"
+     inkscape:cy="113.13348"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:window-width="1680"
+     inkscape:window-height="978"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid5754"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs5748" />
+  <metadata
+     id="metadata5751">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     transform="translate(-256.05466,-98.991521)">
+    <path
+       style="fill:#c17d11;fill-opacity:1;stroke:#8f5902;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       d="M 320,260 335,254.20006 350,260 365,260.58621 380,260 372.98769,285 380,310 387.22368,335 380,360 365,363.72542 350,360 335,363.74485 320,360 323.40169,335 320,310 327.83074,285 320,260"
+       id="rect6266"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#73d216;fill-opacity:1;stroke:#4e9a06;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       d="m 440,190 -11.78178,20.96159 -0.26204,24.04433 -22.12025,10.82995 -10.82992,22.12025 -25.03491,-3.4394 L 350,280 328.76079,269.25565 304.99408,267.95618 282.59674,257.40335 272.04388,235.00601 258.3612,214.55307 260,190 l -2.94947,-24.90375 14.99329,-20.10217 22.9352,-10.01499 10.01497,-22.93521 22.27368,-6.87887 L 350,100 l 21.81755,8.58319 23.18837,3.46063 13.08026,19.86992 19.86994,13.08025 1.3944,23.74136 L 440,190 l 0,0 0,0"
+       id="path5756"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
