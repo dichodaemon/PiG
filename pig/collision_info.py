@@ -23,24 +23,32 @@ class CollisionInfo( object ):
     self.side = ""
     dist = 1E6
     if x < x3:
-      self.leftOverlap = x2 - x3
-      dist =  self.leftOverlap
+      d = x2 - x3
+      dist = abs( d )
       self.side = "LEFT"
+      if x2 > x3:
+        self.leftOverlap = d
     if y < y3:
-      self.bottomOverlap = y2 - y3
-      if self.bottomOverlap < dist:
-        dist = self.bottomOverlap
+      d = y2 - y3
+      if abs( d ) < dist:
+        dist = abs( d )
         self.side = "BOTTOM"
+      if y2 > y3:
+        self.bottomOverlap = d
     if x > x4:
-      self.rightOverlap = x4 - x1
-      if self.rightOverlap < dist:
-        dist = self.rightOverlap
+      d = x4 - x1
+      if abs( d ) < dist:
+        dist = abs( d )
         self.side = "RIGHT"
+      if x4 > x1:
+        self.rightOverlap = d
     if y > y4:
-      self.topOverlap = y4 - y1
-      if self.topOverlap < dist:
-        dist = self.topOverlap
+      d = y4 - y1
+      if abs( d ) < dist:
+        dist = abs( d )
         self.side = "TOP"
+      if y4 > y1:
+        self.topOverlap = d
     self.overlap = (
       self.leftOverlap,
       self.rightOverlap,
