@@ -24,7 +24,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="4"
      inkscape:cx="98.089172"
-     inkscape:cy="93.169486"
+     inkscape:cy="90.919486"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -57,7 +57,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -71,7 +71,7 @@
        d="m 110,1012.8622 c 0,0 20,0 20,0 0,0 -20,4.75 -20,4.75 0,0 20,0 20,0 0,0 -20,4.75 -20,4.75 m 0,-19 c 0,0 20,0 20,0 0,0 -20,4.75 -20,4.75 0,0 20,0 20,0 0,0 -20,4.75 -20,4.75 m 0,-19.00001 c 0,0 20,0 20,0 0,0 -20,4.74999 -20,4.74999 0,0 20,0 20,0 0,0 -20,4.75002 -20,4.75002 m 0,-19.00002 c 0,0 20,0 20,0 0,0 -20,4.75 -20,4.75 0,0 20,0 20,0 0,0 -20,4.75001 -20,4.75001 m 0,-19.00001 c 0,0 20,0 20,0 0,0 -20,4.74999 -20,4.74999 0,0 20,0 20,0 0,0 -20,4.75001 -20,4.75001 m 0,-19.00001 c 0,0 20,0 20,0 0,0 -20,4.75 -20,4.75 0,0 20,0 20,0 0,0 -20,4.75001 -20,4.75001 m 0,-19.00001 c 0,0 20,0 20,0 0,0 -20,4.75001 -20,4.75001 0,0 20,0 20,0 0,0 -20,4.74999 -20,4.74999 m 0,-19 c 0,0 20,0 20,0 0,0 -20,4.75 -20,4.75 0,0 20,0 20,0 0,0 -20,4.75 -20,4.75 m 0,-19.00001 c 0,0 20,0 20,0 0,0 -20,4.75001 -20,4.75001 0,0 20,0 20,0 0,0 -20,4.75 -20,4.75 m 0,-19 c 0,0 20,0 20,0 0,0 -20,4.75 -20,4.75 0,0 20,0 20,0 0,0 -20,4.74999 -20,4.74999 m 0,-18.99999 c 0,0 20,0 20,0 0,0 -20,4.74999 -20,4.74999 0,0 20,0 20,0 0,0 -20,4.75001 -20,4.75001 m 0,-19.00001 c 0,0 20,0 20,0 0,0 -20,4.75 -20,4.75 0,0 20,0 20,0 0,0 -20,4.75001 -20,4.75001"
        style="fill:none;stroke:#2e3436;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/vasquezg/job/slinky3.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky3.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -79,7 +79,7 @@
        d="m 40,1016.1955 c 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.0834 -19.999998,3.0834 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.0833 -19.999998,3.0833 m 0,-12.3333 c 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.0833 -19.999998,3.0833 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.0833 -19.999998,3.0833 m 0,-12.3333 c 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.0833 -19.999998,3.0833 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.0834 -19.999998,3.0834 m 0,-12.33343 c 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08333 -19.999998,3.08333 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.0834 -19.999998,3.0834 m 0,-12.33344 c 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08333 -19.999998,3.08333 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08338 -19.999998,3.08338 m 0,-12.33337 c 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08333 -19.999998,3.08333 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08333 -19.999998,3.08333 m 0,-12.33333 c 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08334 -19.999998,3.08334 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08333 -19.999998,3.08333 m 0,-12.33333 c 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08333 -19.999998,3.08333 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08333 -19.999998,3.08333 m 0,-12.33333 c 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08333 -19.999998,3.08333 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08334 -19.999998,3.08334 m 0,-12.33333 c 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08333 -19.999998,3.08333 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08333 -19.999998,3.08333 m 0,-12.33332 c 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08333 -19.999998,3.08333 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08333 -19.999998,3.08333 m 0,-12.33333 c 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08333 -19.999998,3.08333 0,0 19.999998,0 19.999998,0 0,0 -19.999998,3.08334 -19.999998,3.08334"
        style="fill:none;stroke:#2e3436;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/vasquezg/job/slinky2.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky2.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -87,7 +87,7 @@
        d="m -30,1017.8622 c 0,0 20,0 20,0 0,0 -20,2.25 -20,2.25 0,0 20,0 20,0 0,0 -20,2.25 -20,2.25 m 0,-9 c 0,0 20,0 20,0 0,0 -20,2.25 -20,2.25 0,0 20,0 20,0 0,0 -20,2.25 -20,2.25 m 0,-9 c 0,0 20,0 20,0 0,0 -20,2.25 -20,2.25 0,0 20,0 20,0 0,0 -20,2.25 -20,2.25 m 0,-9 c 0,0 20,0 20,0 0,0 -20,2.25 -20,2.25 0,0 20,0 20,0 0,0 -20,2.25 -20,2.25 m 0,-9.00002 c 0,0 20,0 20,0 0,0 -20,2.25002 -20,2.25002 0,0 20,0 20,0 0,0 -20,2.25 -20,2.25 m 0,-9.00006 c 0,0 20,0 20,0 0,0 -20,2.25005 -20,2.25005 0,0 20,0 20,0 0,0 -20,2.24999 -20,2.24999 m 0,-9.00008 c 0,0 20,0 20,0 0,0 -20,2.25002 -20,2.25002 0,0 20,0 20,0 0,0 -20,2.25002 -20,2.25002 m 0,-9.00002 c 0,0 20,0 20,0 0,0 -20,2.25002 -20,2.25002 0,0 20,0 20,0 0,0 -20,2.24996 -20,2.24996 m 0,-8.99999 c 0,0 20,0 20,0 0,0 -20,2.25 -20,2.25 0,0 20,0 20,0 0,0 -20,2.25001 -20,2.25001 m 0,-9 c 0,0 20,0 20,0 0,0 -20,2.25 -20,2.25 0,0 20,0 20,0 0,0 -20,2.24999 -20,2.24999 m 0,-8.99998 c 0,0 20,0 20,0 0,0 -20,2.24999 -20,2.24999 0,0 20,0 20,0 0,0 -20,2.25 -20,2.25 m 0,-8.99999 c 0,0 20,0 20,0 0,0 -20,2.25 -20,2.25 0,0 20,0 20,0 0,0 -20,2.25 -20,2.25"
        style="fill:none;stroke:#2e3436;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/vasquezg/job/slinky1.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -100,7 +100,7 @@
        sodipodi:ry="15"
        d="M 34,49 C 34,57.284271 27.284271,64 19,64 10.715729,64 4,57.284271 4,49 4,40.715729 10.715729,34 19,34 c 8.284271,0 15,6.715729 15,15 z"
        transform="matrix(0.14590165,0,0,0.14882124,117.22787,898.8376)"
-       inkscape:export-filename="/home/vasquezg/job/slinky3.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky3.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -113,7 +113,7 @@
        sodipodi:ry="4"
        d="m 30,20 c 0,2.209139 -1.790861,4 -4,4 -2.209139,0 -4,-1.790861 -4,-4 0,-2.209139 1.790861,-4 4,-4 2.209139,0 4,1.790861 4,4 z"
        transform="translate(112,870.36216)"
-       inkscape:export-filename="/home/vasquezg/job/slinky3.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky3.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -126,7 +126,7 @@
        sodipodi:rx="4"
        sodipodi:ry="4"
        d="m 30,20 c 0,2.209139 -1.790861,4 -4,4 -2.209139,0 -4,-1.790861 -4,-4 0,-2.209139 1.790861,-4 4,-4 2.209139,0 4,1.790861 4,4 z"
-       inkscape:export-filename="/home/vasquezg/job/slinky3.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky3.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -139,7 +139,7 @@
        sodipodi:rx="4"
        sodipodi:ry="4"
        d="m 30,20 c 0,2.209139 -1.790861,4 -4,4 -2.209139,0 -4,-1.790861 -4,-4 0,-2.209139 1.790861,-4 4,-4 2.209139,0 4,1.790861 4,4 z"
-       inkscape:export-filename="/home/vasquezg/job/slinky3.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky3.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -152,7 +152,7 @@
        sodipodi:rx="4"
        sodipodi:ry="4"
        d="m 30,20 c 0,2.209139 -1.790861,4 -4,4 -2.209139,0 -4,-1.790861 -4,-4 0,-2.209139 1.790861,-4 4,-4 2.209139,0 4,1.790861 4,4 z"
-       inkscape:export-filename="/home/vasquezg/job/slinky3.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky3.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -161,7 +161,7 @@
        id="path3366"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/vasquezg/job/slinky3.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky3.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -170,7 +170,7 @@
        id="path3368"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/vasquezg/job/slinky3.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky3.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -183,7 +183,7 @@
        sodipodi:ry="15"
        d="M 34,49 C 34,57.284271 27.284271,64 19,64 10.715729,64 4,57.284271 4,49 4,40.715729 10.715729,34 19,34 c 8.284271,0 15,6.715729 15,15 z"
        transform="matrix(0.14590165,0,0,0.14882124,47.22787,938.83755)"
-       inkscape:export-filename="/home/vasquezg/job/slinky2.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky2.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -196,7 +196,7 @@
        sodipodi:ry="4"
        d="m 30,20 c 0,2.209139 -1.790861,4 -4,4 -2.209139,0 -4,-1.790861 -4,-4 0,-2.209139 1.790861,-4 4,-4 2.209139,0 4,1.790861 4,4 z"
        transform="translate(42,911.89747)"
-       inkscape:export-filename="/home/vasquezg/job/slinky2.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky2.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -209,7 +209,7 @@
        sodipodi:rx="4"
        sodipodi:ry="4"
        d="m 30,20 c 0,2.209139 -1.790861,4 -4,4 -2.209139,0 -4,-1.790861 -4,-4 0,-2.209139 1.790861,-4 4,-4 2.209139,0 4,1.790861 4,4 z"
-       inkscape:export-filename="/home/vasquezg/job/slinky2.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky2.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -222,7 +222,7 @@
        sodipodi:rx="4"
        sodipodi:ry="4"
        d="m 30,20 c 0,2.209139 -1.790861,4 -4,4 -2.209139,0 -4,-1.790861 -4,-4 0,-2.209139 1.790861,-4 4,-4 2.209139,0 4,1.790861 4,4 z"
-       inkscape:export-filename="/home/vasquezg/job/slinky2.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky2.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -234,8 +234,8 @@
        sodipodi:cy="20"
        sodipodi:rx="4"
        sodipodi:ry="4"
-       d="m 30,20 a 4,4 0 1 1 -8,0 4,4 0 1 1 8,0 z"
-       inkscape:export-filename="/home/vasquezg/job/slinky3.png"
+       d="m 30,20 c 0,2.209139 -1.790861,4 -4,4 -2.209139,0 -4,-1.790861 -4,-4 0,-2.209139 1.790861,-4 4,-4 2.209139,0 4,1.790861 4,4 z"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky2.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -243,7 +243,7 @@
        d="m 49.999998,943.89747 c 0,0 -3.999998,-8 6,-18"
        id="path3366-3"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/vasquezg/job/slinky2.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky2.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -251,7 +251,7 @@
        d="m 49.999998,943.89747 c 1.630212,-2.91376 4.061072,-5.35108 6.862592,-7.15003 2.173778,-1.38503 4.610319,-2.34807 7.137408,-2.84997"
        id="path3368-0"
        inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/vasquezg/job/slinky2.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky2.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -264,7 +264,7 @@
        sodipodi:ry="15"
        d="M 34,49 C 34,57.284271 27.284271,64 19,64 10.715729,64 4,57.284271 4,49 4,40.715729 10.715729,34 19,34 c 8.284271,0 15,6.715729 15,15 z"
        transform="matrix(0.14590165,0,0,0.14882124,-22.772131,958.83757)"
-       inkscape:export-filename="/home/vasquezg/job/slinky1.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -277,7 +277,7 @@
        sodipodi:ry="4"
        d="m 30,20 c 0,2.209139 -1.790861,4 -4,4 -2.209139,0 -4,-1.790861 -4,-4 0,-2.209139 1.790861,-4 4,-4 2.209139,0 4,1.790861 4,4 z"
        transform="translate(-28,934.36213)"
-       inkscape:export-filename="/home/vasquezg/job/slinky1.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -290,7 +290,7 @@
        sodipodi:rx="4"
        sodipodi:ry="4"
        d="m 30,20 c 0,2.209139 -1.790861,4 -4,4 -2.209139,0 -4,-1.790861 -4,-4 0,-2.209139 1.790861,-4 4,-4 2.209139,0 4,1.790861 4,4 z"
-       inkscape:export-filename="/home/vasquezg/job/slinky1.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -303,7 +303,7 @@
        sodipodi:rx="4"
        sodipodi:ry="4"
        d="m 30,20 c 0,2.209139 -1.790861,4 -4,4 -2.209139,0 -4,-1.790861 -4,-4 0,-2.209139 1.790861,-4 4,-4 2.209139,0 4,1.790861 4,4 z"
-       inkscape:export-filename="/home/vasquezg/job/slinky1.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -316,7 +316,7 @@
        sodipodi:rx="4"
        sodipodi:ry="4"
        d="m 30,20 c 0,2.209139 -1.790861,4 -4,4 -2.209139,0 -4,-1.790861 -4,-4 0,-2.209139 1.790861,-4 4,-4 2.209139,0 4,1.790861 4,4 z"
-       inkscape:export-filename="/home/vasquezg/job/slinky1.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -325,7 +325,7 @@
        id="path3366-2"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/vasquezg/job/slinky1.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <path
@@ -334,7 +334,7 @@
        id="path3368-7"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:export-filename="/home/vasquezg/job/slinky1.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90" />
     <g
@@ -342,7 +342,7 @@
        inkscape:transform-center-x="-1.3709392"
        inkscape:transform-center-y="8.4751218"
        transform="matrix(0.86720666,0.4979484,-0.4979484,0.86720666,618.12134,123.3728)"
-       inkscape:export-filename="/home/vasquezg/job/slinky3.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky3.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <path
@@ -403,7 +403,7 @@
        inkscape:transform-center-x="-5.2646135"
        inkscape:transform-center-y="6.8542977"
        transform="matrix(0.97409368,0.22614489,-0.22614489,0.97409368,266.12296,14.987291)"
-       inkscape:export-filename="/home/vasquezg/job/slinky2.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky2.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <path
@@ -464,7 +464,7 @@
        inkscape:transform-center-x="-8.0033875"
        inkscape:transform-center-y="3.7800493"
        transform="matrix(0.99999979,-6.5320952e-4,6.5320952e-4,0.99999979,-38.675654,-9.9946047)"
-       inkscape:export-filename="/home/vasquezg/job/slinky1.png"
+       inkscape:export-filename="/home/vasquezg/job/itesm/game_development/pig/images/slinky1.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90">
       <path

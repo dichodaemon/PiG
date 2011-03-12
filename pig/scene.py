@@ -7,8 +7,6 @@ class Scene( object ):
   def __init__( self, width, height ):
     self.started    = False
     self.startTime  = 0
-    self.width      = width
-    self.height     = height
     self.objects    = {}
     self.drawList   = []
     self.collidable     = set([])
@@ -62,6 +60,8 @@ class Scene( object ):
         c.start( time )
 
   def _update( self, time, elapsed ):
+    #if elapsed != 0:
+      #print 1.0 / elapsed
     result = 0
     if not self.started:
       return result

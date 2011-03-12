@@ -5,12 +5,14 @@ import pygame
 from math import floor
 
 class Camera( Movable ):
-  def __init__( self, scene, width, height, focalLength, zOffset = 0, isometric = False ):
+  def __init__( self, scene, width, height, focalLength, zOffset = 0, isometric = False, pixelYOffset = 0, pixelXOffset = 0 ):
     Movable.__init__( self )
     self.drawList    = scene.drawList
     self.scene       = scene
     self.focalLength = focalLength
     self.zOffset     = zOffset
+    self.pixelYOffset = pixelYOffset
+    self.pixelXOffset = pixelXOffset
     self.isometric   = isometric
     self.width       = width
     self.height      = height
@@ -29,24 +31,25 @@ class Camera( Movable ):
     self.rect.center = (x, y)
 
   def inFrustum( self, o ):
-    if o.moved() or self.moved() or not hasattr( o, "cameraImage" ):
+    if o.moved() or self.moved() or not hasattr( o, "cameraImage" ) or o.viewChanged:
       z = o.z + self.zOffset
       if self.focalLength == 0:
         f  =  self.zOffset
       else:
         f  = self.focalLength / (z * self.pixelSize )
-      width  = int( o.rect.width  * o.pixelSize * f )
-      height = int( o.rect.height * o.pixelSize * f )
+      width  = int( o.rect.width  * f / 100.0 )
+      height = int( o.rect.height * f / 100.0 )
       s      = pygame.transform.smoothscale( o.surface, (width, height) )
       o.cameraImage = s
       o.cameraRect  = s.get_rect()
       x, y = o.getPosition()
-      y = self.scene.height - y
       if self.isometric:
-        y += self.scene.height - o.z
+        y += o.z
       x1   = ( x - self.x ) * f + self.width  / 2.0
-      y1   = ( y - self.scene.height - self.y ) * f + self.height / 2.0
-      o.screenPos = (x1, y1 - height )
+      y1   = ( self.y - y ) * f + self.height / 2.0
+      o.screenPos = (x1 + self.pixelXOffset, y1 - height - self.pixelYOffset )
+    o.moveReset()
+    o.viewChanged = False
     return self.rect.colliderect( o.cameraRect )
 
   def drawObject( self, screen, o ):

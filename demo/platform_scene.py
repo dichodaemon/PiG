@@ -21,7 +21,7 @@ class PlatformScene( pig.Scene ):
       "still", pig.Image( "images/rock.png" ), pixelSize = 1.70 / 53
     )
     self.rock.move( 4, 0, 10 )
-    self.rock.weight = 1
+    #self.rock.weight = 1
     self.addChild( 
       self.rock, getsCollisions = False, collisionGroups = [0]
     )
@@ -64,6 +64,6 @@ class PlatformScene( pig.Scene ):
 
   def draw( self, screen ):
     screen.fill( (255, 255, 255 ) )
-    self.camera.pointTo( self.actor, 0.5, -1 )
+    self.camera.pointTo( self.actor, 0.5, 1 )
     self.camera.draw( screen )
 

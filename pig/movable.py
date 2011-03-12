@@ -9,6 +9,11 @@ class Movable( object ):
     self.oldY  = 0.1
     self.oldZ  = 0.1
 
+  def moveReset( self ):
+    self.oldX = self.__x
+    self.oldY = self.__y
+    self.oldZ = self.__z
+
   def setX( self, value ):
     self.oldX = self.__x
     self.__x = value

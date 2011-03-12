@@ -14,6 +14,9 @@ class Actor( Movable ):
     self.views  = {}
     self.move( 0, 0 )
     self.thickness = 0.1
+    self.viewChanged = False
+    self.currentName = None
+    self.current = None
 
   def getChildren( self ):
     return self.views.values()
@@ -30,15 +33,18 @@ class Actor( Movable ):
     view.pixelSize = pixelSize
     self.views[name] = view
     if len( self.views ) == 1:
-      self.current = self.views.values()[0]
+      self.setView( name )
 
   def setView( self, name ):
-    self.current = self.views[name]
+    if self.current != self.views[name]:
+      self.viewChanged = True
+      self.currentName = name
+      self.current     = self.views[name]
 
   def getRect( self ):
     r = self.current.rect
-    p = self.current.pixelSize
-    return pygame.Rect( self.x / p, self.y / p - r.height, r.width, r.height )
+    p = self.current.pixelSize * 100
+    return pygame.Rect( self.x * 100, self.y * 100 - r.height * p, r.width * p, r.height * p )
   rect = property( getRect )
 
   def getSurface( self ):

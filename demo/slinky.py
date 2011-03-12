@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 
 import pig
+import pygame
 
 class Slinky( pig.Actor ):
   def __init__( self, pixelSize = 1 ):
@@ -32,17 +33,19 @@ class Slinky( pig.Actor ):
     self.d     = "r"
     # Slinky will start out falling
     self.state = "FALLING"
+    self.sound  = pygame.mixer.Sound( "sounds/boink.wav" )
 
   def update( self, time, elapsed ):
     if self.state == "START_JUMP": # Start measuring time from jump start
       self.jumpTime = time
       self.state = "JUMPING"
+      self.playing = False
     elif self.state == "JUMPING":  # Depending on time from jump start
       t = time - self.jumpTime
       if t > 0.5:                    
         self.setView( self.d + "3" ) # Set state as falling and increase vertical
         self.state = "FALLING"       # velocity
-        self.vy    = -8
+        self.vy    = 8
         # If the platform we are leaving is breakable, remove it
         if self.platform.id == "breakable":
           self.platform.remove = True
@@ -51,13 +54,16 @@ class Slinky( pig.Actor ):
       elif t > 0.20:
         self.setView( self.d + "1" )
       elif t > 0.05:
+        if not self.playing:
+          self.sound.play()
+          self.playing = True
         self.setView( self.d + "2" )
       else:
         self.setView( self.d + "3" )
     else:                           # If slinky is falling
       self.setView( self.d + "3" )  # Face the current direction
       self.y  += elapsed * self.vy  # Update position and vertical velocity
-      self.vy += 0.2
+      self.vy -= 0.2
       self.x  += elapsed * self.vx
 
   def onKeyDown( self, key ):
@@ -77,9 +83,9 @@ class Slinky( pig.Actor ):
 
   def onCollide( self, other ):
     # For now, we can only collide on platforms
-    side = pig.collisionSide( self, other )
-    if (      side == "TOP" and self.state == "FALLING" 
-          and self.vy > 0   and abs( self.y - other.y ) < 0.05 ):
+    c = pig.CollisionInfo( self, other )
+    if (      c.side == "TOP" and self.state == "FALLING" 
+          and self.vy < 0   and abs( self.y - other.y ) < 0.05 ):
       self.state    = "START_JUMP"
       self.platform = other
-      pig.autoPush( self, other )
+      c.autoPush( onX = False )

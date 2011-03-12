@@ -23,18 +23,18 @@ class JumpScene( pig.Scene ):
     self.smallIncrement = 1
     # How often new platforms will be added
     self.increment      = 5
-    self.slinky.y  = -self.smallIncrement * 1.5
-    self.lowest    = self.increment
+    self.slinky.y       = self.smallIncrement * 1.5
+    self.lowest         = -self.increment
     # The list of all platforms, they will be deleted when no used anymore
     self.platforms = []
 
   def updatePlatforms( self ):
     '''Create and delete platforms as needed'''
     # Do we need to create new platforms?
-    if self.slinky.y < self.lowest - self.increment / 2.0:
-      self.lowest -= self.increment
+    if self.slinky.y > self.lowest + self.increment / 2.0:
+      self.lowest += self.increment
       # Create new platforms every self.smallIncrement meters
-      for y in xrange( self.lowest, self.lowest - self.increment, -self.smallIncrement ):
+      for y in xrange( self.lowest, self.lowest + self.increment, self.smallIncrement ):
         p = pig.Actor()
         # Randomly create 2 kinds of platform
         if random.randrange( 0, 5 ) < 4:
@@ -49,7 +49,7 @@ class JumpScene( pig.Scene ):
         self.platforms.append( p )
       # Delete platforms that won't be visible anymore
       while True:
-        if self.platforms[0].y > self.lowest + self.increment:
+        if self.platforms[0].y < self.lowest - self.increment:
           p = self.platforms.pop( 0 )
           self.removeChild( p )
         else:
@@ -58,10 +58,10 @@ class JumpScene( pig.Scene ):
   def update( self, time, elapsed ):
     self.updatePlatforms()
     # Compute the y position for our camera
-    y = min( self.lowest + self.increment / 2.0, self.slinky.y )
+    y = max( self.lowest - self.increment / 2.0, self.slinky.y )
     self.camera.y = y
     # If slinky is below the lowest platform, we have died
-    if self.slinky.y > self.lowest + self.increment + self.increment / 2.0:
+    if self.slinky.y < self.lowest -  2 * self.increment:
       return 1
 
   def draw( self, screen ):
