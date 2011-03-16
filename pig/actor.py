@@ -1,6 +1,8 @@
 # -*- coding:utf-8 -*-
 
 import pygame
+
+import image_manager
 from animation  import *
 from utility import *
 
@@ -17,6 +19,13 @@ class Actor( Movable ):
     self.viewChanged = False
     self.currentName = None
     self.current = None
+    self.started = False
+
+  def start( self, time ):
+    self.started = True
+    self.time = time
+    self.updateRectangles()
+    self.current.start( time )
 
   def getChildren( self ):
     return self.views.values()
@@ -40,42 +49,25 @@ class Actor( Movable ):
       self.viewChanged = True
       self.currentName = name
       self.current     = self.views[name]
+      if self.started:
+        self.current.start( self.time )
 
-  def getRect( self ):
-    r = self.current.rect
+  def updateRectangles( self ):
+    image = image_manager.image( self.current.key() )
+    r = image.tightRect
     p = self.current.pixelSize * 100
-    return pygame.Rect( self.x * 100, self.y * 100 - r.height * p, r.width * p, r.height * p )
-  rect = property( getRect )
+    self.rect =  pygame.Rect( self.x * 100, self.y * 100, r.width * p, r.height * p )
 
-  def getSurface( self ):
-    return self.current.surface
-  surface = property( getSurface )
+  def key( self ):
+    return self.current.key()
 
   def _update( self, time, elapsed ):
     if hasattr( self.current, "update" ):
       self.current.update( time, elapsed )
+    self.time = time
     return 0
 
   def _onCollide( self, other ):
     pass
 
-  def __getattribute__( self, name ):
-    try:
-      f1 = object.__getattribute__( self, "_" + name )
-      f2 = None
-      try:
-        f2 = object.__getattribute__( self, name )
-      except AttributeError:
-        pass
-      def result( *args, **kargs ):
-        r = f1( *args, **kargs )
-        if f2:
-          r = f2( *args, **kargs )
-        for c in self.children:
-          if hasattr( c, name ):
-            getattr( c, name )( *args, **kargs )
-        return r
-      return result
-    except AttributeError, e:
-      return object.__getattribute__( self, name )
 

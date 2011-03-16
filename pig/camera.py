@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from movable import *
+import image_manager
 import pygame
 from math import floor
 
@@ -39,9 +40,9 @@ class Camera( Movable ):
         f  = self.focalLength / (z * self.pixelSize )
       width  = int( o.rect.width  * f / 100.0 )
       height = int( o.rect.height * f / 100.0 )
-      s      = pygame.transform.smoothscale( o.surface, (width, height) )
-      o.cameraImage = s
-      o.cameraRect  = s.get_rect()
+      s = image_manager.scaled( o.key(), width, height )
+      o.cameraImage = s.tightImage
+      o.cameraRect  = s.tightRect
       x, y = o.getPosition()
       if self.isometric:
         y += o.z

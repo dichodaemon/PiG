@@ -1,12 +1,17 @@
 # -*- coding: utf-8 -*-
 
 import pygame
+import image_manager
 
 class Image( object ):
   def __init__( self, filename, inverse = False ):
-    self.image = pygame.image.load( filename ).convert_alpha()
-    if inverse:
-      self.image = pygame.transform.flip( self.image, True, False )
-    self.rect    = self.image.get_bounding_rect()
-    self.surface = self.image.subsurface( self.rect )
-    self.rect    = self.image.get_rect()
+    self.frame = image_manager.loadSingle( filename, inverse )
+
+  def start( self, time ):
+    pass
+
+  def finished( self ):
+    return True
+
+  def key( self ):
+    return self.frame

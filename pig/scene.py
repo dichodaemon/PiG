@@ -12,17 +12,29 @@ class Scene( object ):
     self.collidable     = set([])
     self.getsCollisions = set([])
  
-  def addChild( self, child, getsCollisions=False, collisionGroups = None ):
+  def addChild( self, child, getsCollisions=False, collisionGroups = [], collisionsIn = [], collisionsOut = [] ):
+    collisionsIn  = set( collisionsIn )
+    collisionsOut = set( collisionsOut )
     data = Data()
     data.collidable = False
     self.drawList.append( child )
-    if collisionGroups and len( collisionGroups ) > 0:
-      self.collidable.add( child )
+    if getsCollisions:
+      collisionsIn.update( collisionGroups )
+    collisionsOut.update( collisionGroups )
+    if len( collisionsIn ) > 0 or len( collisionsOut ) > 0:
+      data.object = child
+      self.collidable.add( data )
       data.collidable = True
-      data.getsCollisions  = getsCollisions
-      data.collisionGroups = collisionGroups
-      if getsCollisions:
-        self.getsCollisions.add( child )
+      data.collisionsIn = 0
+      for v in collisionsIn:
+        data.collisionsIn |= 1 << v
+      data.collisionsOut = 0
+      for v in collisionsOut:
+        data.collisionsOut |=  1 << v
+      if  len( collisionsIn ) > 0:
+        self.getsCollisions.add( data )
+    if self.started:
+      child.start( self.time )
     self.objects[child] = data
 
   def removeChild( self, child ):
@@ -42,9 +54,14 @@ class Scene( object ):
   children = property( getChildren )
 
   def checkCollisions( self ):
-    for c in self.getsCollisions:
-      for o in self.collidable:
-        if c != o and c.collides( o ) and abs( c.z - o.z ) <= ( c.thickness + o.thickness ) / 2.0:
+    for d1 in self.getsCollisions:
+      c = d1.object
+      for d2 in self.collidable:
+        o = d2.object
+        if (    d1.collisionsIn & d2.collisionsOut > 0
+            and c != o and c.collides( o ) 
+            and abs( c.z - o.z ) <= ( c.thickness + o.thickness ) / 2.0
+        ):
           if hasattr( c, "onCollide" ):
             c.onCollide( o )
 
@@ -58,10 +75,11 @@ class Scene( object ):
     for c in self.children:
       if hasattr( c, "start" ):
         c.start( time )
+    self.time = time
 
   def _update( self, time, elapsed ):
-    #if elapsed != 0:
-      #print 1.0 / elapsed
+    if elapsed != 0:
+      print 1.0 / elapsed
     result = 0
     if not self.started:
       return result
@@ -72,11 +90,22 @@ class Scene( object ):
         r = c.update( time, elapsed )
         if r != None and r != 0:
           result = r
+      for c1 in c.children:
+        if hasattr( c1, "update" ):
+          c1.update( time, elapsed )
+    self.updateRectangles()
     self.checkCollisions()
+    self.updateRectangles()
     for c in self.children:
       if c.remove:
         self.removeChild( c )
+    self.time = time
     return result
+ 
+  def updateRectangles( self ):
+    for c in self.children:
+      if c.moved():
+        c.updateRectangles()
 
   def __getattribute__( self, name ):
     try:
@@ -97,4 +126,4 @@ class Scene( object ):
         return result
       else:
         raise e
-
+  

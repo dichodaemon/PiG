@@ -87,7 +87,7 @@ class Game( object ):
     return True
 
   def draw( self ):
-    self.getScene()._draw( self.screen )
+    self.getScene().draw( self.screen )
     pygame.display.flip()
 
   def step( self ):
