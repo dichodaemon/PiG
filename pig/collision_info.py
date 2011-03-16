@@ -14,19 +14,19 @@ class CollisionInfo( object ):
     dz2 = o2.z - o2.oldZ
     x  = o1.oldX + r1.width  / 200.0
     y  = o1.oldY + r1.height / 200.0
-    z  = o1.oldZ
+    z  = o1.oldZ + o1.thickness / 2.0
     x1 = o1.x
     y1 = o1.y
-    z1 = o1.z - o1.thickness / 2.0
+    z1 = o1.z
     x2 = x1 + r1.width  / 100.0
     y2 = y1 + r1.height / 100.0
-    z2 = o1.z + o1.thickness / 2.0
+    z2 = z1 + o1.thickness
     x3 = o2.x 
     y3 = o2.y
-    z3 = o2.z - o2.thickness / 2.0
+    z3 = o2.z
     x4 = x3 + r2.width  / 100.0
     y4 = y3 + r2.height / 100.0
-    z4 = o2.z + o2.thickness / 2.0
+    z4 = z3 + o2.thickness
 
     self.leftOverlap   = 0
     self.rightOverlap  = 0
