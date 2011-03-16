@@ -21,6 +21,21 @@ class ImageManager( object ):
       self.images[key] = data
     return key
 
+  def block( self, width, height, color ):
+    key = "block: width=%i, height=%i" % ( width, height )
+    key += " (r:%i, g:%i, b:%i, a:%i)" % color
+    print key
+    if not key in self.images:
+      data  = Data()
+      image = pygame.Surface( ( width, height ) ).convert_alpha()
+      image.fill( color )
+      data.image = image
+      data.rect  = image.get_rect()
+      data.tightImage = image.subsurface( image.get_bounding_rect() )
+      data.tightRect  = data.tightImage.get_rect()
+      self.images[key] = data
+    return key
+
   def loadMulti( self, filename, count, inverse = False ):
     keys = [
       filename + ": count=%i, inverse=%i, frame=%i" % ( count, inverse, i)
@@ -61,6 +76,9 @@ manager = ImageManager()
 
 def loadSingle( filename, inverse = False ):
   return manager.loadSingle( filename, inverse )
+
+def block( width, height, color = (0, 0, 0, 0) ):
+  return manager.block( width, height, color )
 
 def loadMulti( filename, count, inverse = False ):
   return manager.loadMulti( filename, count, inverse )
