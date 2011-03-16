@@ -32,7 +32,10 @@ class Scene( object ):
       for v in collisionsOut:
         data.collisionsOut |=  1 << v
       if  len( collisionsIn ) > 0:
+        data.getsCollisions = True
         self.getsCollisions.add( data )
+      else:
+        data.getsCollisions = False
     if self.started:
       child.start( self.time )
     self.objects[child] = data
@@ -43,9 +46,9 @@ class Scene( object ):
       del self.objects[child]
       self.drawList.remove( child )
       if data.collidable:
-        self.collidable.remove( child )
+        self.collidable.remove( data )
         if data.getsCollisions:
-          self.getsCollisions.remove( child )
+          self.getsCollisions.remove( data )
     except KeyError:
       pass
 
@@ -78,8 +81,6 @@ class Scene( object ):
     self.time = time
 
   def _update( self, time, elapsed ):
-    if elapsed != 0:
-      print 1.0 / elapsed
     result = 0
     if not self.started:
       return result

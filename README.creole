@@ -4,4 +4,4 @@ To DO
 * Provide Actor and View with both a tigh collision box and a wide one for
   displaying.
 * Remove width and height from scene where not needed.
-* Add in and out collision groups in actor.
+* Include velocity info in collision side.

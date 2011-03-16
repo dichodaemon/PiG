@@ -26,7 +26,6 @@ class ImageManager( object ):
       filename + ": count=%i, inverse=%i, frame=%i" % ( count, inverse, i)
       for i in xrange( count )
     ]
-    print inverse, keys[0]
     if not keys[0] in self.images:
       full = pygame.image.load( filename ).convert_alpha()
       width     = full.get_width() / count
@@ -36,7 +35,6 @@ class ImageManager( object ):
         data  = Data()
         image = full.subsurface( ( i  * width, 0, width, height ) )
         if inverse:
-          print "inverting"
           image = pygame.transform.flip( image, True, False )
         data.image = image
         data.rect  = image.get_rect()

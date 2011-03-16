@@ -6,54 +6,88 @@ class CollisionInfo( object ):
     self.o2 = o2
     r1 = o1.rect
     r2 = o2.rect
+    dx1 = o1.x - o1.oldX
+    dy1 = o1.y - o1.oldY
+    dz1 = o1.z - o1.oldZ
+    dx2 = o2.x - o2.oldX
+    dy2 = o2.y - o2.oldY
+    dz2 = o2.z - o2.oldZ
     x  = o1.oldX + r1.width  / 200.0
     y  = o1.oldY + r1.height / 200.0
+    z  = o1.oldZ
     x1 = o1.x
     y1 = o1.y
+    z1 = o1.z - o1.thickness / 2.0
     x2 = x1 + r1.width  / 100.0
     y2 = y1 + r1.height / 100.0
+    z2 = o1.z + o1.thickness / 2.0
     x3 = o2.x 
     y3 = o2.y
+    z3 = o2.z - o2.thickness / 2.0
     x4 = x3 + r2.width  / 100.0
     y4 = y3 + r2.height / 100.0
+    z4 = o2.z + o2.thickness / 2.0
+
     self.leftOverlap   = 0
     self.rightOverlap  = 0
     self.topOverlap    = 0
     self.bottomOverlap = 0
+    self.frontOverlap  = 0
+    self.backOverlap   = 0
+
     self.side = ""
     dist = 1E6
-    if x < x3:
-      d = x2 - x3
-      dist = abs( d )
+
+    if x2 > x3:
+      self.leftOverlap = x2 - x3
+    if y2 > y3:
+      self.bottomOverlap = y2 - y3
+    if z2 > z3:
+      self.frontOverlap = z2 - z3
+    if x1 < x4:
+      self.rightOverlap = x4 - x1
+    if y1 < y4:
+      self.topOverlap = y4 - y1
+    if z1 < z4:
+      self.backOverlap = z4 - z1
+
+    if x < x3 and dx1 - dx2 > 0:
+      d = abs( x2 - x3 )
+      dist = d
       self.side = "LEFT"
-      if x2 > x3:
-        self.leftOverlap = d
-    if y < y3:
-      d = y2 - y3
-      if abs( d ) < dist:
-        dist = abs( d )
-        self.side = "BOTTOM"
-      if y2 > y3:
-        self.bottomOverlap = d
-    if x > x4:
-      d = x4 - x1
-      if abs( d ) < dist:
-        dist = abs( d )
+    if x > x4 and dx2 - dx1 > 0:
+      d = abs( x4 - x1 )
+      if d < dist:
+        dist = d
         self.side = "RIGHT"
-      if x4 > x1:
-        self.rightOverlap = d
-    if y > y4:
-      d = y4 - y1
-      if abs( d ) < dist:
-        dist = abs( d )
+    if y < y3 and dy1 - dy2 > 0 :
+      d = abs( y2 - y3 )
+      if d < dist:
+        dist = d
+        self.side = "BOTTOM"
+    if y > y4 and dy2 - dy1 > 0:
+      d = abs( y4 - y1 )
+      if d < dist:
+        dist = d
         self.side = "TOP"
-      if y4 > y1:
-        self.topOverlap = d
+    if z < z3 and dz1 - dz2 > 0 :
+      d = abs( z2 - z3 )
+      if d < dist:
+        dist = d
+        self.side = "FRONT"
+    if z > z4 and dz2 - dz1 > 0:
+      d = abs( z4 - z1 )
+      if d < dist:
+        dist = d
+        self.side = "BACK"
+
     self.overlap = (
       self.leftOverlap,
       self.rightOverlap,
       self.topOverlap,
-      self.bottomOverlap
+      self.bottomOverlap,
+      self.frontOverlap,
+      self.backOverlap
     )
 
   def autoPush( self, onX = True, onY = True ):
