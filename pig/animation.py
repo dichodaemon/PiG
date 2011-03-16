@@ -12,8 +12,11 @@ class Animation( object ):
     self.frame     = 0
     self.loop      = loop
     self.finished  = True
+    self.started   = False
 
   def start( self, time ):
+    print "*"
+    self.started   = True
     self.startTime = time
     self.finished  = False
 

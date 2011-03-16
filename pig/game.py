@@ -36,7 +36,6 @@ class Game( object ):
 
   def getScene( self ):
     scene = self.scenes[self.currentScene]
-    scene._start( self.time )
     return scene
 
   def frameStart( self ):
@@ -76,11 +75,14 @@ class Game( object ):
     return True
 
   def update( self, elapsed ):
+    if not self.getScene().started:
+      self.getScene()._start( self.time )
     code = self.getScene()._update( self.time, elapsed )
     while code in self.transitions[self.currentScene]:
       #TODO: Take a closer look to this
       self.currentScene = self.transitions[self.currentScene][code]
-      self.getScene()._start( self.time )
+      if not self.getScene().started:
+        self.getScene()._start( self.time )
       code = self.getScene()._update( self.time, elapsed )
     if code != 0 and code != None:
       return False

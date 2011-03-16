@@ -23,9 +23,11 @@ class Actor( Movable ):
 
   def start( self, time ):
     self.started = True
+    self.startTime = time
     self.time = time
     self.updateRectangles()
-    self.current.start( time )
+    if not self.current.started:
+      self.current.start( time )
 
   def getChildren( self ):
     return self.views.values()
@@ -49,7 +51,7 @@ class Actor( Movable ):
       self.viewChanged = True
       self.currentName = name
       self.current     = self.views[name]
-      if self.started:
+      if self.started and not self.current.started:
         self.current.start( self.time )
 
   def updateRectangles( self ):
@@ -62,12 +64,9 @@ class Actor( Movable ):
     return self.current.key()
 
   def _update( self, time, elapsed ):
+    self.time = time
+    if hasattr( self, "update" ):
+      self.update( time, elapsed )
     if hasattr( self.current, "update" ):
       self.current.update( time, elapsed )
-    self.time = time
     return 0
-
-  def _onCollide( self, other ):
-    pass
-
-

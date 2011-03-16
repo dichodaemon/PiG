@@ -37,7 +37,8 @@ class Scene( object ):
       else:
         data.getsCollisions = False
     if self.started:
-      child.start( self.time )
+      if not child.started:
+        child.start( self.time )
     self.objects[child] = data
 
   def removeChild( self, child ):
@@ -69,38 +70,33 @@ class Scene( object ):
             c.onCollide( o )
 
   def _start( self, time ):
-    if self.started:
-      return
     self.started   = True
     self.startTime = time
     if hasattr( self, "start" ):
       self.start( time )
     for c in self.children:
-      if hasattr( c, "start" ):
-        c.start( time )
+      if not c.started:
+        if hasattr( c, "start" ):
+          c.start( time )
     self.time = time
 
   def _update( self, time, elapsed ):
+    self.time = time
     result = 0
     if not self.started:
       return result
     if hasattr( self, "update" ):
       result = self.update( time, elapsed )
     for c in self.children:
-      if hasattr( c, "update" ):
-        r = c.update( time, elapsed )
-        if r != None and r != 0:
-          result = r
-      for c1 in c.children:
-        if hasattr( c1, "update" ):
-          c1.update( time, elapsed )
+      r = c._update( time, elapsed )
+      if r != None and r != 0:
+        result = r
     self.updateRectangles()
     self.checkCollisions()
     self.updateRectangles()
     for c in self.children:
       if c.remove:
         self.removeChild( c )
-    self.time = time
     return result
  
   def updateRectangles( self ):

@@ -56,7 +56,9 @@ class Movable( object ):
       self.z = args[0]
 
   def moved( self ):
-    return self.__x != self.oldX or self.__y != self.oldY
+    return (
+               self.__x != self.oldX 
+            or self.__y != self.oldY 
+            or self.__x != self.oldZ
+    )
 
-  def movedZ( self ):
-    return self.__z != self.oldZ
