@@ -47,7 +47,7 @@ class Wolverine( pig.Actor ):
     c = pig.CollisionInfo( self, other )
     if c.side == "TOP" or c.topOverlap > 0 and c.topOverlap < 0.1:
       self.vy = 0
-      c.autoPush( onX = False )
+      c.autoPush()
     else:
       c.autoPush()
 

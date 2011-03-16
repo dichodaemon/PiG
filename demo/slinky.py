@@ -88,4 +88,4 @@ class Slinky( pig.Actor ):
           and self.vy < 0   and abs( self.y - other.y ) < 0.05 ):
       self.state    = "START_JUMP"
       self.platform = other
-      c.autoPush( onX = False )
+      c.autoPush()

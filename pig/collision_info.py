@@ -90,7 +90,7 @@ class CollisionInfo( object ):
       self.backOverlap
     )
 
-  def autoPush( self, onX = True, onY = True ):
+  def autoPush( self ):
     w1 = None
     w2 = None
     if hasattr( self.o1, "weight" ):
@@ -111,25 +111,22 @@ class CollisionInfo( object ):
     w1 = w2  / s 
     w2 = tmp / s
 
-    if onX and onY:
-      if (   ( self.leftOverlap + self.rightOverlap )
-           > ( self.topOverlap + self.bottomOverlap )  ):
-        onY = False
-      else:
-        onX = False
-
-    if onX:
-      if self.leftOverlap > 0:
-        self.o2.x += self.leftOverlap * w2
-        self.o1.x -= self.leftOverlap * w1
-      elif self.rightOverlap > 0:
-        self.o2.x -= self.rightOverlap * w2
-        self.o1.x += self.rightOverlap * w1
-    if onY:
-      if self.topOverlap > 0:
-        self.o2.y -= self.topOverlap * w2
-        self.o1.y += self.topOverlap * w1
-      if self.bottomOverlap > 0:
-        self.o2.y += self.bottomOverlap * w2
-        self.o1.y -= self.bottomOverlap * w1
+    if self.side == "LEFT":
+      self.o2.x += self.leftOverlap * w2
+      self.o1.x -= self.leftOverlap * w1
+    elif self.side == "RIGHT":
+      self.o2.x -= self.rightOverlap * w2
+      self.o1.x += self.rightOverlap * w1
+    elif self.side == "TOP":
+      self.o2.y -= self.topOverlap * w2
+      self.o1.y += self.topOverlap * w1
+    elif self.side == "BOTTOM":
+      self.o2.y += self.bottomOverlap * w2
+      self.o1.y -= self.bottomOverlap * w1
+    elif self.side == "FRONT":
+      self.o2.y += self.frontOverlap * w2
+      self.o1.y -= self.frontOverlap * w1
+    elif self.side == "BACK":
+      self.o2.y -= self.backOverlap * w2
+      self.o1.y += self.backOverlap * w1
 
