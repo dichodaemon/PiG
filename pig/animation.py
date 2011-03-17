@@ -15,7 +15,6 @@ class Animation( object ):
     self.started   = False
 
   def start( self, time ):
-    print "*"
     self.started   = True
     self.startTime = time
     self.finished  = False

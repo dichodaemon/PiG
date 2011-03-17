@@ -67,6 +67,7 @@ class Scene( object ):
             and (
                  c.z > o.z and c.z < o.z + o.thickness
               or o.z > c.z and o.z < c.z + c.thickness
+              or c.z == o.z
             )
         ):
           if hasattr( c, "onCollide" ):

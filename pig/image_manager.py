@@ -24,7 +24,6 @@ class ImageManager( object ):
   def block( self, width, height, color ):
     key = "block: width=%i, height=%i" % ( width, height )
     key += " (r:%i, g:%i, b:%i, a:%i)" % color
-    print key
     if not key in self.images:
       data  = Data()
       image = pygame.Surface( ( width, height ) ).convert_alpha()

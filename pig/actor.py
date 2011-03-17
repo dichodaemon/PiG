@@ -65,8 +65,11 @@ class Actor( Movable ):
 
   def _update( self, time, elapsed ):
     self.time = time
+    result    = 0
     if hasattr( self, "update" ):
-      self.update( time, elapsed )
+      result = self.update( time, elapsed )
     if hasattr( self.current, "update" ):
-      self.current.update( time, elapsed )
-    return 0
+      r = self.current.update( time, elapsed )
+      if r != 0 and r != None:
+        result = r
+    return result
